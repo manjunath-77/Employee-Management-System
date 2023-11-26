@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Employee</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="card col-md-6">
+				<div class='card-body'>
+					<form method="post" th:action="@{/create_employee}" th:object="${employee}">
+						<fieldset>
+							<legend style="color: tomato; text-align: center;">Create Employee</legend>
+							
+<!-- 							<div class="mb-3">
+								<label class="form-label" for="id">Employee Id</label>
+								<input class="form-control" type="text" id="id" th:field="*{id}" required>
+							</div> -->
+							
+							<div class="mb-3">
+								<label class="form-label" for="name">Employee Name</label>
+								<input class="form-control" type="text" id="name" th:field="*{name}" required>
+							</div>
+							
+							<div class="mb-3">
+								<label class="form-label" for="email">Email</label>
+								<input class="form-control" type="text" id="email" th:field="*{email}" required>
+							</div>
+							
+							<div class="mb-3">
+								<label class="form-label" for="id">Date Of Birth</label>
+								<input class="form-control" type="text" id="dob" th:field="*{dob}" required>
+							</div>
+													
+							<div class="mb-3">
+								<label class="form-label" for="salary">Salary</label>
+								<input class="form-control" type="text" id="salary" th:field="*{salary}" required>
+							</div>
+									
+							<div class="mb-3">
+								<label class="form-label" for="status">Status</label>
+								<input class="form-control" type="text" id="status" th:field="*{status}" required>
+							</div>
+								
+							<div class="mb-3">
+								<label class="form-label" for="address">Address</label>
+								<input class="form-control" type="text" id="address" th:field="*{address}" required>
+							</div>
+									
+							<div class="mb-3">
+								<label class="form-label" for="gender">Gender</label>
+								<input class="form-control" type="text" id="gender" th:field="*{gender}" required>
+							</div>
+																																						
+							<input class="btn btn-success" type="submit" value="Create Employee" />
+	
+							<a href="/employees" class='btn btn-primary btn-md'>Goto Employee Home</a>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
